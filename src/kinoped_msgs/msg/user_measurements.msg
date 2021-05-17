@@ -1,0 +1,17 @@
+Header header
+float32 height
+float32 weight
+float32 foot_length
+float32 foot_width
+float32 ground_to_ankle
+float32 ground_to_knee
+float32 ground_to_hip
+float32 ground_to_small_of_back
+float32 ground_to_shoulder
+float32 ground_to_c1_vertebra
+float32 ground_to_back_of_head
+float32 hip_width
+float32 shoulder_width
+float32 shoulder_to_elbow
+float32 shoulder_to_wrist
+float32 shoulder_to_middle_finger_tip

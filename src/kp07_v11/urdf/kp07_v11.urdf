@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="kp07_v11">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.104347088258263 -1.31663141229483E-05 0.412877049618646"
+        rpy="0 0 0" />
+      <mass
+        value="63.617784647431" />
+      <inertia
+        ixx="2.30613127339914"
+        ixy="-3.23512682348357E-06"
+        ixz="0.00647034815101378"
+        iyy="2.55487605799257"
+        iyz="2.15081310232745E-05"
+        izz="3.51350110023049" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.780392156862745 0.76078431372549 0.741176470588235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ar_link">
+    <inertial>
+      <origin
+        xyz="0.0128924732188366 1.20124064056926E-07 0.106969653014065"
+        rpy="0 0 0" />
+      <mass
+        value="1.41326466643614" />
+      <inertia
+        ixx="0.00637579594524733"
+        ixy="-2.27874975114171E-10"
+        ixz="-3.10838664083599E-05"
+        iyy="0.00710485711693362"
+        iyz="3.11793798712309E-09"
+        izz="0.0012877634442907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/ar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/ar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ar_joint"
+    type="revolute">
+    <origin
+      xyz="0.37366 -0.127000000000001 0.518551908545377"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ar_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5235987755983"
+      upper="0.1745329251994"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="br1_link">
+    <inertial>
+      <origin
+        xyz="0.197273849965391 -0.0368554040691015 3.52116507005285E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578692324578" />
+      <inertia
+        ixx="0.000480821788218691"
+        ixy="2.32649044477467E-10"
+        ixz="2.1487123800855E-05"
+        iyy="0.00883230225110044"
+        iyz="-4.40062897755076E-10"
+        izz="0.0088328322950843" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/br1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/br1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0520700000000001 0.0368554 0.18415"
+      rpy="0 1.04719755119658 0" />
+    <parent
+      link="ar_link" />
+    <child
+      link="br1_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.6581"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cr1_link">
+    <inertial>
+      <origin
+        xyz="0.287629872273466 -0.0368554012777096 1.74653669304803E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899917141" />
+      <inertia
+        ixx="0.000113008901120391"
+        ixy="3.6780530005675E-14"
+        ixz="-1.10059165015494E-13"
+        iyy="0.00189696858662353"
+        iyz="1.42608282734562E-10"
+        izz="0.00189622601190326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/cr1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/cr1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cr1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="br1_link" />
+    <child
+      link="cr1_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.2032"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dr_link">
+    <inertial>
+      <origin
+        xyz="-0.00480632422544791 -0.0443760029405194 -0.0584944354296074"
+        rpy="0 0 0" />
+      <mass
+        value="1.23586993122048" />
+      <inertia
+        ixx="0.0026347115469991"
+        ixy="2.74555755908124E-06"
+        ixz="-0.000381855113248733"
+        iyy="0.00632749739276202"
+        iyz="3.21857067102264E-08"
+        izz="0.00396838633976449" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/dr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/dr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dr_joint"
+    type="revolute">
+    <origin
+      xyz="0.422909999999999 0.00724460000000335 0"
+      rpy="3.14159265358979 -1.30899693899576 -3.14159265358978" />
+    <parent
+      link="cr1_link" />
+    <child
+      link="dr_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="br1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="er1_link">
+    <inertial>
+      <origin
+        xyz="0.197462427551641 -0.0441000049675959 3.52118762203535E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578614911236" />
+      <inertia
+        ixx="0.000480821732350888"
+        ixy="3.88545609569003E-10"
+        ixz="1.85256624635079E-05"
+        iyy="0.00886033158264318"
+        iyz="-4.03176549344408E-10"
+        izz="0.00886086163260815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/er1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/er1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="er1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0634999999999999 0 0"
+      rpy="0 -0.698131700796877 0" />
+    <parent
+      link="dr_link" />
+    <child
+      link="er1_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5359"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fr1_link">
+    <inertial>
+      <origin
+        xyz="0.287629873543023 -0.0440999994468661 -7.56109952426698E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899870709" />
+      <inertia
+        ixx="0.000113008901231924"
+        ixy="-9.79621206724693E-14"
+        ixz="1.34441212536764E-13"
+        iyy="0.00189696858726913"
+        iyz="1.42663912351205E-10"
+        izz="0.00189622601241865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/fr1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/fr1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="er1_link" />
+    <child
+      link="fr1_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.2032"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gr_link">
+    <inertial>
+      <origin
+        xyz="0.0536405972413051 -0.0388873797221277 0.133133817696428"
+        rpy="0 0 0" />
+      <mass
+        value="1.20944868233744" />
+      <inertia
+        ixx="0.0178453547045186"
+        ixy="-1.03609806662696E-09"
+        ixz="-9.50289495372822E-05"
+        iyy="0.0181466063907535"
+        iyz="4.61305123428106E-09"
+        izz="0.000838588084364453" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/gr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/gr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gr_joint"
+    type="revolute">
+    <origin
+      xyz="0.422910000000001 -0.00521260000000021 0"
+      rpy="0 1.48352986419433 0" />
+    <parent
+      link="fr1_link" />
+    <child
+      link="gr_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="er1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="hr_link">
+    <inertial>
+      <origin
+        xyz="-0.0355450949347614 0.00337348530946446 -0.0663048175633467"
+        rpy="0 0 0" />
+      <mass
+        value="0.320125825644217" />
+      <inertia
+        ixx="0.000853590950472643"
+        ixy="1.69087202220965E-06"
+        ixz="5.60427115857386E-06"
+        iyy="0.000847100550217572"
+        iyz="2.79851650088369E-12"
+        izz="5.25773414725343E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/hr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/hr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hr_joint"
+    type="revolute">
+    <origin
+      xyz="0.0392430000000002 -0.0388874000000003 0.338614737937696"
+      rpy="0 0 0" />
+    <parent
+      link="gr_link" />
+    <child
+      link="hr_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.1745329251994"
+      upper="0.5235987755983"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ir_link">
+    <inertial>
+      <origin
+        xyz="-0.00299618963479142 1.23195868978465E-07 -0.103166056624998"
+        rpy="0 0 0" />
+      <mass
+        value="0.985700306160896" />
+      <inertia
+        ixx="0.0093656951041299"
+        ixy="-1.0251241815842E-10"
+        ixz="-6.98362537630003E-05"
+        iyy="0.00786271941633994"
+        iyz="-4.09079579988436E-10"
+        izz="0.00184482425678644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/ir_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/ir_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0630696672483271 0.00384854413384111 0.00428526206230417"
+      rpy="0 0 0" />
+    <parent
+      link="hr_link" />
+    <child
+      link="ir_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.1745329251994"
+      upper="0.1745329251994"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="er2_link">
+    <inertial>
+      <origin
+        xyz="0.197462429120894 -0.0440999940453563 -3.52105417904536E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578624405718" />
+      <inertia
+        ixx="0.000480821738675714"
+        ixy="-3.75185410856228E-10"
+        ixz="-1.85256435126848E-05"
+        iyy="0.00886033170293825"
+        iyz="-4.0489025887678E-10"
+        izz="0.00886086175355616" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/er2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/er2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="er2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0529846596374948 0 -0.120190890324769"
+      rpy="0 -0.698131700796878 0" />
+    <parent
+      link="dr_link" />
+    <child
+      link="er2_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="er1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="fr2_link">
+    <inertial>
+      <origin
+        xyz="0.287629873543023 -0.0440999994468663 -7.56109952426698E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899870703" />
+      <inertia
+        ixx="0.000113008901231921"
+        ixy="-9.79610517149318E-14"
+        ixz="1.34439195751317E-13"
+        iyy="0.00189696858726909"
+        iyz="1.42663911398839E-10"
+        izz="0.00189622601241861" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/fr2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/fr2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="er2_link" />
+    <child
+      link="fr2_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="fr1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="br2_link">
+    <inertial>
+      <origin
+        xyz="0.197273847661975 -0.0368553984092451 -3.52150001771134E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578680959621" />
+      <inertia
+        ixx="0.000480821780569167"
+        ixy="-2.51386241371685E-10"
+        ixz="-2.14871507066869E-05"
+        iyy="0.00883230204805584"
+        iyz="-4.37982873029519E-10"
+        izz="0.0088328320913368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/br2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/br2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0289140155081158 0.0368554 0.0528258861358218"
+      rpy="0 1.04719755119658 0" />
+    <parent
+      link="ar_link" />
+    <child
+      link="br2_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="br1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="cr2_link">
+    <inertial>
+      <origin
+        xyz="0.287629872273465 -0.0368554012777118 1.74653747020415E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899917143" />
+      <inertia
+        ixx="0.000113008901120392"
+        ixy="3.6792746927376E-14"
+        ixz="-1.10059907015829E-13"
+        iyy="0.00189696858662352"
+        iyz="1.42608284249518E-10"
+        izz="0.00189622601190326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/cr2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/cr2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cr2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="br2_link" />
+    <child
+      link="cr2_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="cr1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="al_link">
+    <inertial>
+      <origin
+        xyz="0.0128924732188366 1.20124064584282E-07 0.106969653014066"
+        rpy="0 0 0" />
+      <mass
+        value="1.41326466643614" />
+      <inertia
+        ixx="0.00637579594524731"
+        ixy="-2.27874977995626E-10"
+        ixz="-3.10838664083575E-05"
+        iyy="0.00710485711693361"
+        iyz="3.11793799037392E-09"
+        izz="0.0012877634442907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/al_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/al_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="al_joint"
+    type="revolute">
+    <origin
+      xyz="0.37366 0.127 0.518551908545377"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="al_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.1745329251994"
+      upper="0.5235987755983"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bl1_link">
+    <inertial>
+      <origin
+        xyz="0.19727384996539 -0.0368554040691033 3.52116507004174E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578692324575" />
+      <inertia
+        ixx="0.000480821788218688"
+        ixy="2.32649101771789E-10"
+        ixz="2.14871238008619E-05"
+        iyy="0.00883230225110046"
+        iyz="-4.40062898070931E-10"
+        izz="0.00883283229508432" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/bl1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/bl1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0520699999999999 0.0368554 0.18415"
+      rpy="0 1.04719755119659 0" />
+    <parent
+      link="al_link" />
+    <child
+      link="bl1_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.6580627893946"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cl1_link">
+    <inertial>
+      <origin
+        xyz="0.287629872273464 -0.036855401277712 1.74653702611494E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899917143" />
+      <inertia
+        ixx="0.000113008901120392"
+        ixy="3.6793698760718E-14"
+        ixz="-1.10056525660622E-13"
+        iyy="0.00189696858662352"
+        iyz="1.426082840827E-10"
+        izz="0.00189622601190326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/cl1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/cl1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cl1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="bl1_link" />
+    <child
+      link="cl1_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.2032"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dl_link">
+    <inertial>
+      <origin
+        xyz="-0.00480632422544847 -0.0443760029405199 -0.0584944354296069"
+        rpy="0 0 0" />
+      <mass
+        value="1.23586993122048" />
+      <inertia
+        ixx="0.0026347115469991"
+        ixy="2.74555755908469E-06"
+        ixz="-0.000381855113248731"
+        iyy="0.00632749739276201"
+        iyz="3.2185706709633E-08"
+        izz="0.00396838633976448" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/dl_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/dl_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dl_joint"
+    type="revolute">
+    <origin
+      xyz="0.42291 0.00724460000000129 0"
+      rpy="3.14159265358979 -1.30899693899575 -3.14159265358979" />
+    <parent
+      link="cl1_link" />
+    <child
+      link="dl_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="bl1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="el1_link">
+    <inertial>
+      <origin
+        xyz="0.197462427551641 -0.0441000049675966 3.5211876222907E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578614911236" />
+      <inertia
+        ixx="0.000480821732350888"
+        ixy="3.88545619765834E-10"
+        ixz="1.85256624635144E-05"
+        iyy="0.0088603315826432"
+        iyz="-4.03176548745518E-10"
+        izz="0.00886086163260816" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/el1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/el1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="el1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0635000000000012 0 0"
+      rpy="0 -0.698131700796892 0" />
+    <parent
+      link="dl_link" />
+    <child
+      link="el1_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5359"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fl1_link">
+    <inertial>
+      <origin
+        xyz="0.287629873543023 -0.0440999994468674 -7.56108176069858E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899870707" />
+      <inertia
+        ixx="0.000113008901231923"
+        ixy="-9.79611918298471E-14"
+        ixz="1.34436215889446E-13"
+        iyy="0.00189696858726914"
+        iyz="1.42663912841155E-10"
+        izz="0.00189622601241865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/fl1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/fl1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="el1_link" />
+    <child
+      link="fl1_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.2032"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gl_link">
+    <inertial>
+      <origin
+        xyz="0.0536405972413049 -0.0388873797221277 0.133133817696428"
+        rpy="0 0 0" />
+      <mass
+        value="1.20944868233744" />
+      <inertia
+        ixx="0.0178453547045186"
+        ixy="-1.03609806677826E-09"
+        ixz="-9.50289495372725E-05"
+        iyy="0.0181466063907535"
+        iyz="4.61305122480908E-09"
+        izz="0.000838588084364452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/gl_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/gl_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gl_joint"
+    type="revolute">
+    <origin
+      xyz="0.42291 -0.00521260000000123 0"
+      rpy="0 1.48352986419434 0" />
+    <parent
+      link="fl1_link" />
+    <child
+      link="gl_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="el1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="hl_link">
+    <inertial>
+      <origin
+        xyz="-0.0355450949347615 -0.00337348530946467 -0.0663048174910308"
+        rpy="0 0 0" />
+      <mass
+        value="0.320125825644217" />
+      <inertia
+        ixx="0.000853590950472643"
+        ixy="-1.69087202220967E-06"
+        ixz="5.60426889927419E-06"
+        iyy="0.000847100550217572"
+        iyz="2.79851670841906E-12"
+        izz="5.25773414725343E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/hl_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/hl_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hl_joint"
+    type="revolute">
+    <origin
+      xyz="0.0392429999999999 -0.0388874000000001 0.338614737937695"
+      rpy="0 0 0" />
+    <parent
+      link="gl_link" />
+    <child
+      link="hl_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5235987755983"
+      upper="0.1745329251994"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="il_link">
+    <inertial>
+      <origin
+        xyz="-0.0029961896347912 1.23195868895198E-07 -0.103166056624997"
+        rpy="0 0 0" />
+      <mass
+        value="0.985700306160895" />
+      <inertia
+        ixx="0.00936569510412989"
+        ixy="-1.02512418842277E-10"
+        ixz="-6.98362537630007E-05"
+        iyy="0.00786271941633994"
+        iyz="-4.09079588154357E-10"
+        izz="0.00184482425678645" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/il_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/il_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="il_joint"
+    type="revolute">
+    <origin
+      xyz="-0.063069667248327 -0.00384854413384136 0.0042852620623044"
+      rpy="0 0 0" />
+    <parent
+      link="hl_link" />
+    <child
+      link="il_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.1745329251994"
+      upper="0.1745329251994"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="el2_link">
+    <inertial>
+      <origin
+        xyz="0.197462429120893 -0.0440999940453572 -3.52105417880111E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.62857862440572" />
+      <inertia
+        ixx="0.000480821738675714"
+        ixy="-3.75185413187621E-10"
+        ixz="-1.85256435126917E-05"
+        iyy="0.00886033170293837"
+        iyz="-4.04890259090114E-10"
+        izz="0.00886086175355628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/el2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/el2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="el2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0529846596374962 0 -0.12019089032477"
+      rpy="0 -0.698131700796892 0" />
+    <parent
+      link="dl_link" />
+    <child
+      link="el2_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="el1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="fl2_link">
+    <inertial>
+      <origin
+        xyz="0.287629873543023 -0.044099999446867 -7.56107620958346E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899870712" />
+      <inertia
+        ixx="0.000113008901231925"
+        ixy="-9.79613794067714E-14"
+        ixz="1.3443617692593E-13"
+        iyy="0.00189696858726916"
+        iyz="1.42663911728801E-10"
+        izz="0.00189622601241867" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/fl2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/fl2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="el2_link" />
+    <child
+      link="fl2_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="fl1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="bl2_link">
+    <inertial>
+      <origin
+        xyz="0.197273847661975 -0.0368553984092451 -3.52150001770024E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.628578680959621" />
+      <inertia
+        ixx="0.000480821780569165"
+        ixy="-2.51386238753428E-10"
+        ixz="-2.14871507066947E-05"
+        iyy="0.00883230204805588"
+        iyz="-4.37982869402687E-10"
+        izz="0.00883283209133683" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/bl2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/bl2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl2_joint"
+    type="revolute">
+    <origin
+      xyz="0.0289140155081157 0.0368554 0.052825886135822"
+      rpy="0 1.04719755119659 0" />
+    <parent
+      link="al_link" />
+    <child
+      link="bl2_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="bl1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="cl2_link">
+    <inertial>
+      <origin
+        xyz="0.287629872273466 -0.0368554012777118 1.74653724815954E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.264532899917147" />
+      <inertia
+        ixx="0.000113008901120393"
+        ixy="3.67933623407858E-14"
+        ixz="-1.10060130632846E-13"
+        iyy="0.00189696858662356"
+        iyz="1.42608284660636E-10"
+        izz="0.0018962260119033" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/cl2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kp07_v11/meshes/collision/cl2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cl2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="bl2_link" />
+    <child
+      link="cl2_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="cl1_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+</robot>

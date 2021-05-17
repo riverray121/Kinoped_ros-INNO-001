@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kp07_v11
+    relative_path: urdf/kp07_v11.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/kp07_v11.srdf
+  CONFIG:
+    author_name: Scott Boswell
+    author_email: scott.boswell@usafirmware.com
+    generated_timestamp: 1602608633

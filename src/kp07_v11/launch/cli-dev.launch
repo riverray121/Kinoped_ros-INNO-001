@@ -1,0 +1,70 @@
+<launch>
+  <arg name="model" default="urdf/kp07_v11.urdf"/>
+  <arg name="gui" default="False" />
+
+  <arg name="port" default="9090" />
+  <arg name="address" default="0.0.0.0" />
+  <arg name="ssl" default="true" />
+  <arg name="authenticate" default="false" />
+  <arg name="certfile" default="/home/sboswell/projects/INNO001/branches/INNO001_apps/Kinoped_dotnet/Kinoped.Webdotnet/certificate.pem"/>
+  <arg name="keyfile" default="/home/sboswell/projects/INNO001/branches/INNO001_apps/Kinoped_dotnet/Kinoped.Webdotnet/key.pem" />
+  <arg name="retry_startup_delay" default="5" />
+  <arg name="fragment_timeout" default="600" />
+  <arg name="delay_between_messages" default="0" />
+  <arg name="max_message_size" default="None" />
+  <arg name="unregister_timeout" default="10" />
+  <arg name="websocket_external_port" default="None" />
+  <arg name="websocket_ping_interval" default="0" />
+  <arg name="websocket_ping_timeout" default="30" />
+  <arg name="websocket_null_origin" default="true" />
+  <arg name="topics_glob" default="[*]" />
+  <arg name="services_glob" default="[*]" />
+  <arg name="params_glob" default="[*]" />
+  <arg name="use_compression" default="false" />
+  <arg name="bson_only_mode" default="false" />
+
+  <!-- Output: screen, log -->
+  <arg name="output" default="screen" />
+  <param name="robot_description" textfile="$(find kp07_v11)/$(arg model)" />
+  <param name="use_gui" value="$(arg gui)" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" />
+  
+  <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher" respawn="true" output="$(arg output)"/>
+
+  <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" respawn="true" output="$(arg output)">
+    <param name="certfile" value="$(arg certfile)" />
+    <param name="keyfile" value="$(arg keyfile)" />
+    <param name="authenticate" value="$(arg authenticate)" />
+    <param name="port" value="$(arg port)"/>
+    <param name="address" value="$(arg address)"/>
+    <param name="retry_startup_delay" value="$(arg retry_startup_delay)"/>
+    <param name="fragment_timeout" value="$(arg fragment_timeout)"/>
+    <param name="delay_between_messages" value="$(arg delay_between_messages)"/>
+    <param name="max_message_size" value="$(arg max_message_size)"/>
+    <param name="unregister_timeout" value="$(arg unregister_timeout)"/>
+    <param name="use_compression" value="$(arg use_compression)"/>
+
+    <param name="websocket_ping_interval" value="$(arg websocket_ping_interval)" />
+    <param name="websocket_ping_timeout" value="$(arg websocket_ping_timeout)" />
+    <param name="websocket_external_port" value="$(arg websocket_external_port)" />
+    <param name="websocket_null_origin" value="$(arg websocket_null_origin)" />
+
+    <param name="topics_glob" value="$(arg topics_glob)"/>
+    <param name="services_glob" value="$(arg services_glob)"/>
+    <param name="params_glob" value="$(arg params_glob)"/>
+  </node>
+
+  <node name="rosapi" pkg="rosapi" type="rosapi_node" output="$(arg output)">
+    <param name="topics_glob" value="$(arg topics_glob)"/>
+    <param name="services_glob" value="$(arg services_glob)"/>
+    <param name="params_glob" value="$(arg params_glob)"/>
+  </node>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="true" output="$(arg output)"/>
+
+  <node name="kinoped" pkg="kinoped" type="kinoped" respawn="true" output="$(arg output)"/>
+
+  <node name="xsensThread" pkg="kinoped" type="xsensThread" respawn="true" output="$(arg output)"/>
+
+</launch>

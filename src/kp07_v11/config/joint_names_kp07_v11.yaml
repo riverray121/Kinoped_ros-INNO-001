@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'ar_joint', 'br1_joint', 'cr1_joint', 'dr_joint', 'er1_joint', 'fr1_joint', 'gr_joint', 'hr_joint', 'ir_joint', 'er2_joint', 'fr2_joint', 'br2_joint', 'cr2_joint', 'al_joint', 'bl1_joint', 'cl1_joint', 'dl_joint', 'el1_joint', 'fl1_joint', 'gl_joint', 'hl_joint', 'il_joint', 'el2_joint', 'fl2_joint', 'bl2_joint', 'cl2_joint', ]

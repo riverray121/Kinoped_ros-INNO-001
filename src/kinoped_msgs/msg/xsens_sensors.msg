@@ -1,0 +1,12 @@
+Header header
+uint8 POSITION_LEFT_FOOT=0
+uint8 POSITION_RIGHT_FOOT=1
+uint8 POSITION_LEFT_KNEE=2
+uint8 POSITION_RIGHT_KNEE=3
+uint8 POSITION_LEFT_HIP=4
+uint8 POSITION_RIGHT_HIP=5
+uint8 POSITION_ALTERNATE_1=6
+uint8 POSITION_ALTERNATE_2=7
+uint8[] positions
+string[] mac_addresses
+string[] descriptions
