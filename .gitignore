@@ -1,0 +1,13 @@
+## Git Ignore files
+
+# Build results
+build/
+install/
+devel/
+.ros/
+
+#!*.[Cc]ache/
+
+# Others
+~$*
+*~
